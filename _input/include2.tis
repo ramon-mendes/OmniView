@@ -1,0 +1,9 @@
+function ViewShowFilter(filter)
+{
+	self#hd-filter.show();
+	//self.post(::self#hd-filter.$(span).text = "29 font families shown");// why it is slow?
+
+	Main.arr_font_list.filter(function() {
+
+	});
+}

@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F16AE7E-7B1A-4010-9520-7C3BF40922F6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Input</RootNamespace>
+    <AssemblyName>Input</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AnionsTasks\tis\ddm.tis" />
+    <None Include="AnionsTasks\tis\gapi.tis" />
+    <None Include="AnionsTasks\tis\settings.tis" />
+    <None Include="AnionsTasks\tis\ui.tis" />
+    <None Include="AnionsTasks\tis\utils.tis" />
+    <None Include="classifications.test" />
+    <None Include="Content\wtf.scss" />
+    <None Include="Content\wtf.less" />
+    <None Include="Content\wtf2.csss" />
+    <None Include="GFPicker\lib_growl\lib_growl.less" />
+    <None Include="GFPicker\lib_growl\lib_growl.tis" />
+    <None Include="GFPicker\main.tis" />
+    <None Include="GFPicker\style\fontello\config.json" />
+    <None Include="GFPicker\style\fontello\fontgfpicker.ttf" />
+    <None Include="GFPicker\style\global.csss" />
+    <None Include="GFPicker\style\ui_list.less" />
+    <None Include="GFPicker\tis\fontitem.tis" />
+    <None Include="GFPicker\tis\lib_console.tis" />
+    <None Include="GFPicker\tis\lib_settings\settings.tis" />
+    <None Include="GFPicker\tis\tmpdata.tis" />
+    <None Include="GFPicker\tis\utils.tis" />
+    <None Include="include.tis" />
+    <None Include="include2.tis" />
+    <Content Include="unittest.html" />
+    <Content Include="input.c" />
+    <None Include="TIS IncludeRecursion\third.tis" />
+    <None Include="TIS IncludeRecursion\second.tis" />
+    <None Include="TIS IncludeRecursion\first.tis" />
+    <None Include="input.tis" />
+    <None Include="SciterDTools\debugger\colorizer.tis" />
+    <None Include="SciterDTools\debugger\source-view.tis" />
+    <None Include="SciterDTools\fonts.tis" />
+    <None Include="SciterDTools\home\dlg_news_style.less" />
+    <None Include="SciterDTools\home\rfl.tis" />
+    <None Include="SciterDTools\inc_inspector\console.tis" />
+    <None Include="SciterDTools\inc_inspector\data_handler.tis" />
+    <None Include="SciterDTools\inc_inspector\data_popup.less" />
+    <None Include="SciterDTools\inc_inspector\inspector.less" />
+    <None Include="SciterDTools\inc_inspector\inspector.tis" />
+    <None Include="SciterDTools\inc_inspector\network.tis" />
+    <None Include="SciterDTools\inc_inspector\popup_common.less" />
+    <None Include="SciterDTools\inc_inspector\popup_common.tis" />
+    <None Include="SciterDTools\inc_inspector\remote.tis" />
+    <None Include="SciterDTools\input.tis" />
+    <None Include="SciterDTools\library\virtual-tree.tis" />
+    <None Include="SciterDTools\lib_colorpicker\colorpicker.bc" />
+    <None Include="SciterDTools\lib_colorpicker\colorpicker.tis" />
+    <None Include="SciterDTools\lib_colortouch\common.less" />
+    <None Include="SciterDTools\lib_colortouch\common.tis" />
+    <None Include="SciterDTools\lib_colortouch\sliderpicker.tis" />
+    <None Include="SciterDTools\lib_git\git.tis" />
+    <None Include="SciterDTools\lib_menu\menu-chrome.less" />
+    <None Include="SciterDTools\lib_menu\toggler-knob.svg" />
+    <None Include="SciterDTools\lib_rainbow\rainbow.tis" />
+    <None Include="SciterDTools\lib_rainbow\source-code.tis" />
+    <None Include="SciterDTools\lib_rainbow\source-codeORIGINAL.tis" />
+    <None Include="SciterDTools\lib_settings\settings.tis" />
+    <None Include="SciterDTools\lib_web\debug-peer.tis" />
+    <None Include="SciterDTools\lib_web\utils.tis" />
+    <None Include="SciterDTools\style\default.less" />
+    <None Include="SciterDTools\style\font-awesome-4.2.0\fontawesome-webfont.ttf" />
+    <None Include="SciterDTools\style\fontello\config.json" />
+    <None Include="SciterDTools\style\fontello\fontello.ttf" />
+    <None Include="SciterDTools\style\fonts\Shumi.otf" />
+    <None Include="SciterDTools\style\global.less" />
+    <None Include="SciterDTools\style\global_base.less" />
+    <None Include="SciterDTools\toolbar.tis" />
+    <None Include="SciterDTools\wiki\wiki.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AnionsTasks\config.html" />
+    <Content Include="AnionsTasks\default.html" />
+    <Content Include="AnionsTasks\dlg_edit_task.html" />
+    <Content Include="AnionsTasks\dlg_enter_serial.html" />
+    <Content Include="AnionsTasks\input.html" />
+    <Content Include="Content\wtf2.css" />
+    <Content Include="GFPicker\img\1452299932_database_edit.png" />
+    <Content Include="GFPicker\img\1452300093_11.Notebook.png" />
+    <Content Include="GFPicker\img\1452300158_www_page.png" />
+    <Content Include="GFPicker\img\1452300163_CloudyD-A.png" />
+    <Content Include="GFPicker\img\257-_STARS.PNG_-1033.png" />
+    <Content Include="GFPicker\img\background.png" />
+    <Content Include="GFPicker\img\background_off.png" />
+    <Content Include="GFPicker\img\bullet_star.png" />
+    <Content Include="GFPicker\img\close.png" />
+    <Content Include="GFPicker\img\close_button.png" />
+    <Content Include="GFPicker\img\close_button_active.png" />
+    <Content Include="GFPicker\img\draw_star.png" />
+    <Content Include="GFPicker\img\filter.png" />
+    <Content Include="GFPicker\img\ic_reset.png" />
+    <Content Include="GFPicker\img\loader_219.png" />
+    <Content Include="GFPicker\img\loader_319.png" />
+    <Content Include="GFPicker\img\loader_362.png" />
+    <Content Include="GFPicker\img\Star %282%29.png" />
+    <Content Include="GFPicker\img\star.png" />
+    <Content Include="GFPicker\index.html" />
+    <Content Include="GFPicker\lib_growl\unittest.html" />
+    <Content Include="GFPicker\popup_collections.html" />
+    <Content Include="GFPicker\popup_styles.html" />
+    <Content Include="GFPicker\style\fontello\fontgfpicker-codes.css" />
+    <Content Include="GFPicker\style\fontello\fontgfpicker-sciter.css" />
+    <Content Include="GFPicker\style\fontello\unittest.html" />
+    <Content Include="GFPicker\tis\lib_settings\unittest.html" />
+    <Content Include="GFPicker\ui_list.html" />
+    <Content Include="GFPicker\unittest.html" />
+    <Content Include="include.css" />
+    <Content Include="input.html" />
+    <Content Include="input2.html" />
+    <Content Include="SciterDTools\config.html" />
+    <Content Include="SciterDTools\debugger\debugger.html" />
+    <Content Include="SciterDTools\debugger\source-code.css" />
+    <Content Include="SciterDTools\default.html" />
+    <Content Include="SciterDTools\home\dlg_news.html" />
+    <Content Include="SciterDTools\home\home.html" />
+    <Content Include="SciterDTools\home\inc_footfx.html" />
+    <Content Include="SciterDTools\home\inc_sysinfo.html" />
+    <Content Include="SciterDTools\img\ajax_loader.png" />
+    <Content Include="SciterDTools\img\alpha_grid.png" />
+    <Content Include="SciterDTools\img\arrow_closed.png" />
+    <Content Include="SciterDTools\img\arrow_open.png" />
+    <Content Include="SciterDTools\img\back.png" />
+    <Content Include="SciterDTools\img\bar_alpha.png" />
+    <Content Include="SciterDTools\img\bar_hue.png" />
+    <Content Include="SciterDTools\img\bar_saturation.png" />
+    <Content Include="SciterDTools\img\close2.png" />
+    <Content Include="SciterDTools\img\elmenu_btn.png" />
+    <Content Include="SciterDTools\img\elmenu_btn_hover.png" />
+    <Content Include="SciterDTools\img\forward.png" />
+    <Content Include="SciterDTools\img\grid.png" />
+    <Content Include="SciterDTools\img\grid2.png" />
+    <Content Include="SciterDTools\img\hud_resize_corner.png" />
+    <Content Include="SciterDTools\img\icon-inspector.png" />
+    <Content Include="SciterDTools\img\icon_vs.png" />
+    <Content Include="SciterDTools\img\logo_shadow.png" />
+    <Content Include="SciterDTools\img\logo_styled.png" />
+    <Content Include="SciterDTools\img\new.png" />
+    <Content Include="SciterDTools\img\noise.png" />
+    <Content Include="SciterDTools\img\picker.png" />
+    <Content Include="SciterDTools\img\playground\bg-header.png" />
+    <Content Include="SciterDTools\img\playground\bg-site.jpg" />
+    <Content Include="SciterDTools\img\playground\download.png" />
+    <Content Include="SciterDTools\img\playground\github-logo.png" />
+    <Content Include="SciterDTools\img\playground\grain.png" />
+    <Content Include="SciterDTools\img\playground\view.png" />
+    <Content Include="SciterDTools\img\shadow.png" />
+    <Content Include="SciterDTools\img\subheader_bg.png" />
+    <Content Include="SciterDTools\img\swatch.png" />
+    <Content Include="SciterDTools\img\under-construction.gif" />
+    <Content Include="SciterDTools\img\waves-bg.png" />
+    <Content Include="SciterDTools\img\wip_bg.gif" />
+    <Content Include="SciterDTools\img_test\azure_bg.png" />
+    <Content Include="SciterDTools\img_test\bg-drawings.png" />
+    <Content Include="SciterDTools\img_test\btn\btn_normal.png" />
+    <Content Include="SciterDTools\img_test\btn\btn_normal2.png" />
+    <Content Include="SciterDTools\img_test\btn\btn_normal4.png" />
+    <Content Include="SciterDTools\img_test\btn\btn_normal5.png" />
+    <Content Include="SciterDTools\img_test\btn\btn_normal6.png" />
+    <Content Include="SciterDTools\img_test\btn\btn_normal7.png" />
+    <Content Include="SciterDTools\img_test\btn\btn_normal8.png" />
+    <Content Include="SciterDTools\img_test\btn\btn_normal9.png" />
+    <Content Include="SciterDTools\img_test\btn\btn_pressed.png" />
+    <Content Include="SciterDTools\img_test\close.png" />
+    <Content Include="SciterDTools\img_test\editor-breakpoint%402x.png" />
+    <Content Include="SciterDTools\img_test\editor-breakpoint.png" />
+    <Content Include="SciterDTools\img_test\editor-debug-location%402x.png" />
+    <Content Include="SciterDTools\img_test\editor-debug-location.png" />
+    <Content Include="SciterDTools\img_test\favicons-sprite16.png" />
+    <Content Include="SciterDTools\img_test\hud_resize_corner.png" />
+    <Content Include="SciterDTools\img_test\loading.png" />
+    <Content Include="SciterDTools\img_test\mc3.gif" />
+    <Content Include="SciterDTools\img_test\menus\close.png" />
+    <Content Include="SciterDTools\img_test\menus\dashboard.png" />
+    <Content Include="SciterDTools\img_test\menus\dashboard_highlighted.png" />
+    <Content Include="SciterDTools\img_test\menus\folder.png" />
+    <Content Include="SciterDTools\img_test\menus\gear.png" />
+    <Content Include="SciterDTools\img_test\menus\PaintDotNet.Icons.Updates.InstallAtExit.png" />
+    <Content Include="SciterDTools\img_test\more.gif" />
+    <Content Include="SciterDTools\img_test\polished_window_resize.png" />
+    <Content Include="SciterDTools\img_test\resizer.png" />
+    <Content Include="SciterDTools\img_test\start-ajaxloader.png" />
+    <Content Include="SciterDTools\img_test\stripes-info-negative.png" />
+    <Content Include="SciterDTools\img_test\stripes-info-positive.png" />
+    <Content Include="SciterDTools\img_test\stripes-warning.png" />
+    <Content Include="SciterDTools\img_test\tile.png" />
+    <Content Include="SciterDTools\img_test\xubuntu-quantal.png" />
+    <Content Include="SciterDTools\img_test\xubuntu-raring.png" />
+    <Content Include="SciterDTools\img_test\xubuntu-saucy.png" />
+    <Content Include="SciterDTools\inc_inspector\colorpicker_popup.html" />
+    <Content Include="SciterDTools\inc_inspector\colortouch_popup.html" />
+    <Content Include="SciterDTools\inc_inspector\console_popup.html" />
+    <Content Include="SciterDTools\inc_inspector\data_popup.html" />
+    <Content Include="SciterDTools\inc_inspector\fontpicker_popup.html" />
+    <Content Include="SciterDTools\inc_inspector\inspector.html" />
+    <Content Include="SciterDTools\inc_inspector\inspector2.html" />
+    <Content Include="SciterDTools\inc_inspector\snippet_popup.html" />
+    <Content Include="SciterDTools\inc_inspector\texturepicker_popup.html" />
+    <Content Include="SciterDTools\inc_inspector\unittest.html" />
+    <Content Include="SciterDTools\library.html" />
+    <Content Include="SciterDTools\library\folder-view.htm" />
+    <Content Include="SciterDTools\library\playground.html" />
+    <Content Include="SciterDTools\library\playground_home.html" />
+    <Content Include="SciterDTools\library\playground_view.html" />
+    <Content Include="SciterDTools\library\samples.html" />
+    <Content Include="SciterDTools\library\transition-doc.htm" />
+    <Content Include="SciterDTools\library\unittest.html" />
+    <Content Include="SciterDTools\lib_colorpicker\inc_colorpicker.html" />
+    <Content Include="SciterDTools\lib_colorpicker\unittest.shtml" />
+    <Content Include="SciterDTools\lib_colortouch\bg2.jpg" />
+    <Content Include="SciterDTools\lib_colortouch\inc_cbg.html" />
+    <Content Include="SciterDTools\lib_colortouch\inc_colorize.html" />
+    <Content Include="SciterDTools\lib_colortouch\inc_hue-saturation.html" />
+    <Content Include="SciterDTools\lib_colortouch\inc_hue2.html" />
+    <Content Include="SciterDTools\lib_colortouch\unittest.shtml" />
+    <Content Include="SciterDTools\lib_git\unittest.html" />
+    <Content Include="SciterDTools\lib_menu\toggler.css" />
+    <Content Include="SciterDTools\lib_menu\toggler2.css" />
+    <Content Include="SciterDTools\lib_menu\unittest.html" />
+    <Content Include="SciterDTools\lib_rainbow\rainbow-css.js" />
+    <Content Include="SciterDTools\lib_rainbow\rainbow-html.js" />
+    <Content Include="SciterDTools\lib_rainbow\rainbow-tiscript.js" />
+    <Content Include="SciterDTools\lib_rainbow\source-code.css" />
+    <Content Include="SciterDTools\lib_rainbow\theme-std.css" />
+    <Content Include="SciterDTools\lib_rainbow\unittest.html" />
+    <Content Include="SciterDTools\lib_search\unitest.html" />
+    <Content Include="SciterDTools\lib_settings\unittest.html" />
+    <Content Include="SciterDTools\lib_texturepicker\unittest.shtml" />
+    <Content Include="SciterDTools\licensing.html" />
+    <Content Include="SciterDTools\style\font-awesome-4.2.0\font-awesome-sciter.css" />
+    <Content Include="SciterDTools\style\fontello\fontello-codes.css" />
+    <Content Include="SciterDTools\style\fontello\fontello-sciter.css" />
+    <Content Include="SciterDTools\style\fonts\Shumi-font.css" />
+    <Content Include="SciterDTools\style\unittest.html" />
+    <Content Include="SciterDTools\unittest.html" />
+    <Content Include="SciterDTools\version.txt" />
+    <Content Include="SciterDTools\wiki\cheatsheet.shtml" />
+    <Content Include="SciterDTools\wiki\default.shtml" />
+    <Content Include="SciterDTools\wiki\home.shtml" />
+    <Content Include="SciterDTools\wiki\homeOLD.shtml" />
+    <Content Include="SciterDTools\wiki\lib_web.shtml" />
+    <Content Include="SciterDTools\wiki\mastercss.shtml" />
+    <Content Include="SciterDTools\wiki\stock.shtml" />
+    <Content Include="SciterDTools\wiki\test_markup.shtml" />
+    <Content Include="test.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CSS IncludeRecursion\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties input_1tis__JSONSchema="http://json-schema.org/geo" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

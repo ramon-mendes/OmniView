@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<Extern href="stdidcmd.h"/>
+	<Extern href="vsshlids.h"/>
+
+	<Commands package="GUID_OmniViewPackage">
+		<Groups>
+			<Group guid="GUID_CmdOmniView" id="ID_Group" priority="0x0100">
+				<Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
+			</Group>
+		</Groups>
+
+		<Buttons>
+			<Button guid="GUID_CmdOmniView" id="ID_CmdToggleOmniView" priority="0x0100" type="Button">
+				<Parent guid="GUID_CmdOmniView" id="ID_Group" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<Strings>
+					<ButtonText>Toggle OmniVie</ButtonText>
+				</Strings>
+			</Button>
+
+			<Button guid="GUID_CmdOmniView" id="ID_CmdToggleConsole" priority="0x0100" type="Button">
+				<Parent guid="GUID_CmdOmniView" id="ID_Group" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<Strings>
+					<ButtonText>Toggle OmniVie console</ButtonText>
+				</Strings>
+			</Button>
+		</Buttons>
+	</Commands>
+	
+	<KeyBindings>
+		<KeyBinding guid="GUID_CmdOmniView" id="ID_CmdToggleOmniView" editor="guidHtmlEditorFactory" mod1="Control" key1="E" mod2="Control" key2="V" />
+		<KeyBinding guid="GUID_CmdOmniView" id="ID_CmdToggleConsole" editor="guidHtmlEditorFactory" mod1="Control" key1="E" mod2="Control" key2="B" />
+		<!--<KeyBinding guid="GUID_CmdOmniView" id="ID_CmdToggleConsole" editor="guidHtmlEditorFactory" mod1="Control" key1="E" mod2="Control" key2="C" />-->
+	</KeyBindings>
+	
+	<Symbols>
+		<GuidSymbol name="GUID_OmniViewPackage" value="{4bfa7cef-9c74-45a6-93ba-8e6a405e71e7}" />
+		
+		<GuidSymbol name="GUID_CmdSet" value="{1413BA08-4C40-4919-831B-09AD68F847F9}" />
+
+		<GuidSymbol name="GUID_CmdOmniView" value="{15abb72b-1241-4c5c-93b8-e9354592367e}">
+			<IDSymbol name="ID_Group" value="0x0100" />
+			<IDSymbol name="ID_CmdToggleOmniView" value="0x0101" />
+			<IDSymbol name="ID_CmdToggleConsole" value="0x0102" />
+		</GuidSymbol>
+
+		<!-- VS Internal -->
+		<GuidSymbol name="guidTextEditor" value="{8b382828-6202-11d1-8870-0000f87579d2}" />
+		<GuidSymbol name="guidHtmlEditor" value="{C76D83F8-A489-11D0-8195-00A0C91BBEE3}" />
+		<GuidSymbol name="guidHtmlEditorFactory" value="{40d31677-cbc0-4297-a9ef-89d907823a98}" />
+		<GuidSymbol name="guidWebFormsEditor" value="{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}" />
+		
+		<GuidSymbol name="htmlEditorCommandSet" value="{D7E8C5E1-BDB8-11D0-9C88-0000F8040A53}">
+			<IDSymbol name="htmlContextMenu" value="0x0033" />
+			<!-- 53 in hex is 0x0035 -->
+		</GuidSymbol>
+
+		<GuidSymbol name="htmlEditorCommandSetLibra" value="{78F03954-2FB8-4087-8CE7-59D71710B3BB}">
+			<IDSymbol name="htmlContextMenuLibra" value="1" />
+		</GuidSymbol>
+	</Symbols>
+</CommandTable>

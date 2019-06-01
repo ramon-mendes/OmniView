@@ -1,0 +1,15 @@
+﻿<!--OmniView:on-->
+<html>
+<body>
+	<style>
+		body { margin: 10px; }
+	</style>
+
+	<script type="text/tiscript">
+	</script>
+
+	#btn: <button #btn>Click me</button>
+	<br /><br />#txt: <input />
+	<br /><br />#ptxt: <plaintext></plaintext>
+</body>
+</html>

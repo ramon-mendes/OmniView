@@ -1,0 +1,133 @@
+class FontItem : Behavior
+{
+	function this(data, insearch)
+	{
+		this._data = data;
+		this._insearch = insearch;
+		this._installed = ActiveCollection.dic_ff.exists(data.family);
+		this._favorite = Settings.ns_data.arr_favorites.indexOf(data.family) != -1;
+	}
+
+	function attached()
+	{
+		var el_item = this;
+		var styles_shown = false;
+
+		var el_title = el_item.$(.area-title);
+		if(el_item._insearch)
+			el_title[0].html = "<b>" + el_item._data.family + "</b>, " + el_item._data.variants.length + " styles";
+		else
+			el_title[0].html = "<b>" + el_item._data.family + "</b>, " + el_item._data.variants_sel.length + " of " + el_item._data.variants.length + " styles selected";
+		
+		el_item.$(.source).text = "From " + EFontSourceName[el_item._data.source];
+
+		el_item.$(.btn-styles).on("click", function(evt) {
+			el_item.$(.area-title .btn-styles).attributes.toggleClass("ft-down-dir");
+			el_item.$(.area-title .btn-styles).attributes.toggleClass("ft-up-dir");
+
+			if(!el_item._insearch)
+				el_item.$(.check-btns).toggle();
+
+			if(styles_shown)
+			{
+				HideItemVariants(el_item);
+				styles_shown = false;
+			} else {
+				ShowItemVariants(el_item);
+				styles_shown = true;
+			}
+		});
+
+		if(!el_item._insearch)
+		{
+			el_item.$(.btn-remove).on("click", function() {
+				ActiveCollection.ToggleFont(el_item._data, false);
+				el_item.remove();
+			});
+
+			el_item.$(.btn-check).on("click", function(evt) {
+				for(var el in el_item.$$(.btn-chk-variant))
+				{
+					el.value = true;
+					el.onValueChanged();
+				}
+			});
+			el_item.$(.btn-uncheck).on("click", function(evt) {
+				for(var el in el_item.$$(.btn-chk-variant))
+				{
+					el.value = false;
+					el.onValueChanged();
+				}
+			});
+		} else {
+			if(el_item._installed)
+				el_item.state.checked = true;
+
+			el_item.$(.btn-add).on("click", function() {
+				el_item.state.checked = true;
+				el_item._installed = true;
+				ActiveCollection.ToggleFont(el_item._data, true);
+			});
+
+			el_item.$(.btn-rmv).on("click", function() {
+				el_item.state.checked = false;
+				el_item._installed = false;
+				ActiveCollection.ToggleFont(el_item._data, false);
+			});
+
+			el_item.$(.source-img).@#src = "img/source_" + EFontSource[el_item._data.source] + ".png";
+		}
+
+		el_item.$(.btn-favorite).on("click", function(evt) {
+			var is = el_item._favorite = !el_item._favorite;
+
+			this.attributes.toggleClass("active", is);
+
+			var arr_favorites = Settings.ns_data.arr_favorites;
+			if(is)
+				arr_favorites.push(el_item._data.family);
+			else
+				arr_favorites.removeByValue(el_item._data.family);
+			Settings.StoreWork();
+		});
+
+		if(el_item._favorite)
+		{
+			this.$(.btn-favorite).attributes.addClass("active");
+		}
+	}
+
+	function toggle_styles()
+	{
+
+	}
+
+	function update_styles()
+	{
+		assert(!this._insearch);
+		var el_title = this.$(.area-title);
+		el_title[0].html = "<b>" + this._data.family + "</b>, " + this._data.variants_sel.length + " of " + this._data.variants.length + " styles selected";
+	}
+}
+
+
+/*el_item.$(.btn-styles).on("click", function(evt) {
+				var (x1,y1,x2,y2) = this.box(#rect, #margin, #screen);
+
+				var v = view.window({
+					type: View.TOOL_WINDOW,
+					url: self.url("popup_styles.html"),
+					x: x1,
+					y: y2 + 1,
+					state: View.WINDOW_SHOWN,
+					parameters: el_item._data
+				});
+
+				view.on("activate", function(mode) {
+					if(mode)
+					{
+						view.off(this function);
+						v.close();
+					}
+				});
+			});*/
