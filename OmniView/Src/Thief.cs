@@ -1,8 +1,8 @@
-using System;
-using System.Runtime.InteropServices;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.OLE.Interop;
 using Microsoft.VisualStudio.Shell;
+using System;
+using System.Runtime.InteropServices;
 
 // see alternative: https://social.msdn.microsoft.com/Forums/vstudio/en-US/773a3983-471a-4628-99ba-034274be1df8/iwpftextview-mousehover-popup-window-does-not-capture-all-keystrokes?forum=vsx
 namespace OmniView

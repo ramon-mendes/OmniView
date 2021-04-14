@@ -1,14 +1,14 @@
-﻿using System;
+﻿using SciterSharp;
+using SciterSharp.Interop;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Reflection;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-using SciterSharp;
-using SciterSharp.Interop;
 
 namespace OmniView
 {
@@ -171,7 +171,7 @@ namespace OmniView
 		public static extern IntPtr GetModuleHandle(string lpModuleName);
 
 		[DllImport("kernel32.dll", SetLastError = true)]
-		public static extern uint GetModuleFileName([In]IntPtr hModule, [Out]StringBuilder lpFilename, [In][MarshalAs(UnmanagedType.U4)] int nSize);
+		public static extern uint GetModuleFileName([In] IntPtr hModule, [Out] StringBuilder lpFilename, [In][MarshalAs(UnmanagedType.U4)] int nSize);
 	}
 
 	class SciterDOH : SciterDebugOutputHandler

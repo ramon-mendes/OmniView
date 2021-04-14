@@ -5,6 +5,7 @@
     <StartProgram>C:\Program Files %28x86%29\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe</StartProgram>
     <StartArguments>D:\Projetos-VSX\OmniCode\_input\input.sln /rootsuffix Exp</StartArguments>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DeployTargetInstanceId />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <StartAction>Program</StartAction>

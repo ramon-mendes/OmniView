@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+    <Metadata>
+        <Identity Id="OmniView.MISoftware.e3a6c7fb-0320-4655-9a97-afdf58c57fae" Version="2.16" Language="en-US" Publisher="MI Software" />
+        <DisplayName>OmniView for VS2017</DisplayName>
+        <Description xml:space="preserve">Provides a previewer margin to the HTML editor, allowing you to instantly see the output of Sciter HTML page</Description>
+        <MoreInfo>http://misoftware.com.br/Home/Post/OmniView</MoreInfo>
+        <License>Resources\LICENSE</License>
+        <GettingStartedGuide>http://misoftware.com.br/Pages/OmniView</GettingStartedGuide>
+        <Icon>Resources\icon.png</Icon>
+        <PreviewImage>Resources\preview.png</PreviewImage>
+        <Tags>Sciter, HTML, CSS</Tags>
+    </Metadata>
+    <Installation>
+        <InstallationTarget Version="[12.0,15.0]" Id="Microsoft.VisualStudio.Community" />
+    </Installation>
+    <Dependencies>
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+      <Dependency Id="Microsoft.VisualStudio.MPF.16.0" DisplayName="Visual Studio MPF 16.0" d:Source="Installed" Version="[16.0,17.0)" />
+  </Dependencies>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    </Assets>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0.26208.0,16.0)" DisplayName="Visual Studio core editor" />
+    </Prerequisites>
+</PackageManifest>

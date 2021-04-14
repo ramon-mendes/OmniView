@@ -1,18 +1,18 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.Text;
+using Microsoft.VisualStudio.Text.Editor;
+using SciterSharp;
+using SciterSharp.Interop;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Threading;
-using System.Windows.Interop;
-using System.Runtime.InteropServices;
-using Microsoft.VisualStudio.Text;
-using Microsoft.VisualStudio.Text.Editor;
-using SciterSharp;
-using SciterSharp.Interop;
 
 namespace OmniView
 {
@@ -103,7 +103,7 @@ namespace OmniView
 		{
 			var edit = Document.TextBuffer.CreateEdit();
 			string linebreak = "\r\n";
-			string html_view = String.Empty;
+			string html_view = string.Empty;
 
 			if(_has_header)
 			{
@@ -140,7 +140,7 @@ namespace OmniView
 		private void ReloadControl()
 		{
 			Utils.DebugOutputString("ReloadControl - " + Document.FilePath + " - " + _all_instances.Count + " - " + Utils.GetCallerName());
-			
+
 			if(_active)
 			{
 				_sciter_ctrl.Destroy();
@@ -202,7 +202,7 @@ namespace OmniView
 			_sciter_ctrl.OnCreated += (o, s) => OnControlCreated();
 			return _sciter_ctrl;
 		}
-		
+
 		private class SciterControlHost : HwndHost
 		{
 			public SciterWindow _wnd;
@@ -218,7 +218,7 @@ namespace OmniView
 					_host = null;
 				}
 			}
-			
+
 			protected override HandleRef BuildWindowCore(HandleRef hwndParent)
 			{
 				Debug.Assert(_wnd == null);
@@ -295,7 +295,7 @@ namespace OmniView
 			_grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(5, GridUnitType.Pixel) });
 			_grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(WIDTH, GridUnitType.Pixel) });
 			_grid.RowDefinitions.Add(new RowDefinition());
-			 
+
 			_previewControl = CreatePreviewControl();
 			Debug.Assert(_previewControl != null);
 			_grid.Children.Add(_previewControl);
@@ -324,7 +324,7 @@ namespace OmniView
 		}
 
 		#region IWpfTextViewMargin Members
-		
+
 		public FrameworkElement VisualElement { get { return this; } }
 
 		#endregion
@@ -343,7 +343,7 @@ namespace OmniView
 		}
 
 		public bool Enabled { get { ThrowIfDisposed(); return true; } }
-		
+
 		public ITextViewMargin GetTextViewMargin(string marginName)
 		{
 			ThrowIfDisposed();

@@ -1,3 +1,4 @@
+
 #if !SCITER_APP_RESOURCE_SKIP
 namespace SciterAppResource
 {

@@ -15,7 +15,7 @@
 				<Parent guid="GUID_CmdOmniView" id="ID_Group" />
 				<CommandFlag>DynamicVisibility</CommandFlag>
 				<Strings>
-					<ButtonText>Toggle OmniVie</ButtonText>
+					<ButtonText>Toggle OmniView</ButtonText>
 				</Strings>
 			</Button>
 
@@ -23,7 +23,7 @@
 				<Parent guid="GUID_CmdOmniView" id="ID_Group" />
 				<CommandFlag>DynamicVisibility</CommandFlag>
 				<Strings>
-					<ButtonText>Toggle OmniVie console</ButtonText>
+					<ButtonText>Toggle OmniView console</ButtonText>
 				</Strings>
 			</Button>
 		</Buttons>

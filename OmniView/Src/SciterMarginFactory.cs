@@ -1,14 +1,14 @@
-﻿using System;
-using System.Linq;
+﻿using Microsoft.VisualStudio.Editor;
+using Microsoft.VisualStudio.OLE.Interop;
+using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.Text;
+using Microsoft.VisualStudio.Text.Editor;
+using Microsoft.VisualStudio.TextManager.Interop;
+using Microsoft.VisualStudio.Utilities;
+using System;
 using System.Collections;
 using System.ComponentModel.Composition;
-using Microsoft.VisualStudio.Text.Editor;
-using Microsoft.VisualStudio.Utilities;
-using Microsoft.VisualStudio.Text;
-using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Editor;
-using Microsoft.VisualStudio.TextManager.Interop;
-using Microsoft.VisualStudio.OLE.Interop;
+using System.Linq;
 
 namespace OmniView
 {
@@ -36,17 +36,17 @@ namespace OmniView
 			ITextDocument document;
 			if(!TextDocumentFactoryService.TryGetTextDocument(wpfTextViewHost.TextView.TextDataModel.DocumentBuffer, out document))
 				return null;
-			
+
 			var ct = document.TextBuffer.ContentType;
 			if(ct.IsOfType("htmlx"))// || document.FilePath.EndsWith(".tis"))
 			{
 				IWpfTextView textView = wpfTextViewHost.TextView;
-				if(textView.Roles.Any(r => r.Contains("DIFF")))
+				/*if(textView.Roles.Any(r => r.Contains("DIFF")))
 					return null;
 
 				var props = textView.Properties.PropertyList;
 				if(props.Count(p => p.Value.GetType().FullName.Contains("Difference")) != 0)
-					return null;
+					return null;*/
 
 				//IVsTextView textViewAdapter = AdaptersFactory.GetViewAdapter(textView);
 				//textView.Properties.GetOrCreateSingletonProperty(() => new CommandFilter(textView, textViewAdapter, ServiceProvider));
