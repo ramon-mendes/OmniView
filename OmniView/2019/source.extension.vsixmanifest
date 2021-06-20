@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="OmniView.MISoftware.e3a6c7fb-0320-4655-9a97-afdf58c57fa3" Version="2.17" Language="en-US" Publisher="MI Software" />
+        <Identity Id="OmniView.MISoftware.e3a6c7fb-0320-4655-9a97-afdf58c57fa3" Version="2.18" Language="en-US" Publisher="MI Software" />
         <DisplayName>OmniView for VS2019</DisplayName>
         <Description xml:space="preserve">Provides a previewer margin to the HTML editor, allowing you to instantly see the output of Sciter HTML page</Description>
         <MoreInfo>http://misoftware.com.br/Home/Post/OmniView</MoreInfo>
@@ -20,6 +20,7 @@
     </Dependencies>
     <Assets>
         <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+        <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
     </Assets>
     <Prerequisites>
         <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,)" DisplayName="Visual Studio core editor" />

@@ -18,8 +18,6 @@ namespace OmniView
 	[MarginContainer(PredefinedMarginNames.Right)]
 	[ContentType("text")]
 	[TextViewRole(PredefinedTextViewRoles.Interactive)]
-	[TextViewRole(PredefinedTextViewRoles.Document)]
-	[TextViewRole(PredefinedTextViewRoles.Editable)]
 	internal sealed class OmniViewFactory : IWpfTextViewMarginProvider
 	{
 		[Import]

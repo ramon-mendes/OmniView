@@ -11,7 +11,7 @@ namespace OmniView._2019
         public const string Name = "OmniView for VS2019";
         public const string Description = @"Provides a previewer margin to the HTML editor, allowing you to instantly see the output of Sciter HTML page";
         public const string Language = "en-US";
-        public const string Version = "2.17";
+        public const string Version = "2.18";
         public const string Author = "MI Software";
         public const string Tags = "Sciter, HTML, CSS";
     }
